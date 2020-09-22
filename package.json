@@ -5,7 +5,10 @@
   "private": "true",
   "main": "index.js",
   "scripts": {
-    "bundle": "webpack"
+    "bundle": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server",
+    "server": "node server.js"
   },
   "author": "Ryann",
   "license": "ISC",
@@ -14,6 +17,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "cssnano": "^4.1.10",
+    "express": "^4.17.1",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
     "node-sass": "^4.14.1",
@@ -27,7 +31,9 @@
     "sugarss": "^3.0.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {}
 }

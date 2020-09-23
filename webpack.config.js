@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {
   CleanWebpackPlugin
@@ -14,12 +15,12 @@ module.exports = {
   entry: {
     //main: './src/index.js',
     // sub: './src/index.js', // 打包生成两个文件
-    second: './src/second.js'
+    // second: './src/second.js',
+    HMR: './src/HMR.js'
   },
   output: { // 输出配置
     // 如果打包后的文件是要上传到服务器的，那就可以修改这个参数来让引入文件时自动帮你加上cdn前缀
     //publicPath: 'http://www.yourServerUrl.com.cn',
-    publicPath: '/',
 
     //filename: 'bundle.js', // 打包后的文件名，但如果名字写死了，打包多个文件时就会报错，因为会覆盖掉先打包的文件
     // 我们配置了 HtmlWebpackPlugin 后，打包再多的 js 文件都能自动引入
@@ -29,10 +30,13 @@ module.exports = {
   // 使用 devServer 开发能大大的提升效率
   // 开启一个 web 服务器能使用 ajax 请求并很大程度上模拟线上环境
   // 早期的 devServer 不太成熟，容易出错，所以很多程序员都会自己写一个类似它的中间件来监听代码改动，我们这里就学一学，详见 server.js
+  // webpack-dev-server 打包的时候不会生成 dist/ 到硬盘目录，而是存到内存中，有效的提高我们的开发效率
   devServer: {
     port: '8080',
     contentBase: './dist', // 需要展示的根目录
     open: true, // 启动时自动使用浏览器打开页面
+    hot: true, // 开启 Hot Module Replacement 这个功能
+    hotOnly: true, // 这个配置参数的意义是：即使 HMR 功能没有生效，我们也不要让浏览器自动刷新
     proxy: {
       '/direct': 'http://localhost:3000' // 能自动转发指定的请求网址到别的域名或端口
     }
@@ -95,6 +99,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    // 添加这样一个插件配合上 webpack-dev-server 参数配置就能实现 HMR 功能了，很简单的
+    // 嗯，开启玩记得重启一下 webpack-dev-server，不然会按照之前的配置傻傻的刷新
+    new webpack.HotModuleReplacementPlugin()
   ]
 }

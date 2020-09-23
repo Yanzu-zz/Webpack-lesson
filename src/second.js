@@ -3,4 +3,4 @@
 // 这时候我们就可以打开 sourceMap 来帮助我们查看打包后的文件错误对应的源代码位置
 // sourceMap 实际上是一个映射关系
 console.log('second!!!') // 这里我们故意写错
-console.log('yeeeeas')
+console.log('nooooo')

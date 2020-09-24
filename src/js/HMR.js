@@ -1,5 +1,5 @@
 // HMR Hot Module Replacement 热模块替换
-// import './css/HMR.css'
+// import '../css/HMR.css'
 import counter from './counter'
 
 // css 热模块替换实例

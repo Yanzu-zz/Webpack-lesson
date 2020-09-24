@@ -13,10 +13,12 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   // entry: './src/index.js', // 入口文件，这样写是下面的简写
   entry: {
-    //main: './src/index.js',
-    // sub: './src/index.js', // 打包生成两个文件
-    // second: './src/second.js',
-    HMR: './src/HMR.js'
+    // main: './src/js/index.js',
+    // sub: './src/js/index.js', // 打包生成两个文件
+    // second: './src/js/second.js',
+    // HMR: './src/js/HMR.js',
+    // babel: './src/js/babel.js',
+    react: './src/js/react.js'
   },
   output: { // 输出配置
     // 如果打包后的文件是要上传到服务器的，那就可以修改这个参数来让引入文件时自动帮你加上cdn前缀
@@ -44,53 +46,89 @@ module.exports = {
   // 引入解析其它文件的配置属性（输入输出位置/名字等）
   module: {
     rules: [{
-        test: /\.(jpe?g|png|gif|webp)$/,
-        use: {
-          // 使用
-          loader: 'url-loader',
-          options: {
-            // placeholder 占位符
-            name: '[name]_[hash].[ext]', // 打包后输出的文件名字
-            outputPath: 'images/', // 输出文件夹路径
-            limit: 3048 // 图片小于 指定的k 才打包成 base64 格式
-          }
-        }
-      },
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        // 通过这个例子可以看出，每个使用的模块都有自己的任务
-        // 一环接一环的解析下去，最终生成我们想要的代码样式
-        use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2, // 这个配置参数可以让在 scss 文件中import的文件也经过下面两个loader的打包
-              // modules: true // 开启 css 的模块化打包，这样就可以像引入js一样引入css文件，但是设置这个之后你定义的css类名会变成一串hash值
-            }
-          },
-          // Compiles Sass to CSS
-          'sass-loader',
-          // 自动添加浏览器兼容前后缀loader，非常方便
-          'postcss-loader'
-        ]
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name]_[hash].[ext]',
-            outputPath: 'fonts/'
-          }
+      test: /\.(jpe?g|png|gif|webp)$/,
+      use: {
+        // 使用
+        loader: 'url-loader',
+        options: {
+          // placeholder 占位符
+          name: '[name]_[hash].[ext]', // 打包后输出的文件名字
+          outputPath: 'images/', // 输出文件夹路径
+          limit: 3048 // 图片小于 指定的k 才打包成 base64 格式
         }
       }
+    },
+    {
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader', 'postcss-loader']
+    },
+    {
+      test: /\.s[ac]ss$/i,
+      // 通过这个例子可以看出，每个使用的模块都有自己的任务
+      // 一环接一环的解析下去，最终生成我们想要的代码样式
+      use: [
+        // Creates `style` nodes from JS strings
+        'style-loader',
+        // Translates CSS into CommonJS
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 2, // 这个配置参数可以让在 scss 文件中import的文件也经过下面两个loader的打包
+            // modules: true // 开启 css 的模块化打包，这样就可以像引入js一样引入css文件，但是设置这个之后你定义的css类名会变成一串hash值
+          }
+        },
+        // Compiles Sass to CSS
+        'sass-loader',
+        // 自动添加浏览器兼容前后缀loader，非常方便
+        'postcss-loader'
+      ]
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name]_[hash].[ext]',
+          outputPath: 'fonts/'
+        }
+      }
+    },
+    {
+      test: /\.m?js$/,
+      exclude: /node_modules/,
+      use: {
+        // babel-loader 可以将 ES6+ 代码转化为一颗 抽象语法树
+        loader: "babel-loader",
+        // babel 有太多的配置项了，如果在这里写很多的话，会显得很臃肿，所以可以去根目录下新建一个个 .babelrc 文件来写配置
+        // 如果配置了 .babelrc 文件的话，下面的options选项就可以删除掉了
+        // options: {
+        //   // 再用 @babel/preset-env 可以翻译为低版本的 js 代码
+        //   // 但单单用这两个东东是不够的，有些更新奇的方法或变量（如 Promise）就可能转化不了，这里就要依靠 @babel/polyfill
+        //   // presets: ['@babel/preset-env']
+        //   // 按需引入（babel 自动判断你加了哪些需要引入的转换代码）
+        //   presets: [['@babel/preset-env', {
+        //     targets: {
+        //       chrome: '67'
+        //     },
+        //     useBuiltIns: 'usage'
+        //   }]]
+
+        //   // 如果只是正常的开发项目的话，用上面的配置参数就好了，下面的 plugins 是给哪些开发轮子组件的开发者用的
+        //   // @babel/plugin-transform-runtime 会用闭包的形式注入，而不会像 polyfill 那样直接全局注入
+        //   // "plugins": [[
+        //   //   "@babel/plugin-transform-runtime",
+        //   //   {
+        //   //     "absoluteRuntime": false,
+        //   //     "corejs": 3,
+        //   //     "helpers": true,
+        //   //     "regenerator": true,
+        //   //     "useESModules": false,
+        //   //     "version": "7.0.0-beta.0"
+        //   //   }
+        //   // ]]
+        // }
+      }
+    }
     ]
   },
   // plugin 可以在 webpack 云新高某个时刻的时候，帮你做一些事情（类似中间件）
@@ -101,7 +139,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     // 添加这样一个插件配合上 webpack-dev-server 参数配置就能实现 HMR 功能了，很简单的
-    // 嗯，开启玩记得重启一下 webpack-dev-server，不然会按照之前的配置傻傻的刷新
+    // 嗯，开启完记得重启一下 webpack-dev-server，不然会按照之前的配置傻傻的刷新
     new webpack.HotModuleReplacementPlugin()
   ]
 }

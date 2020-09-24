@@ -1,5 +1,5 @@
-var avatar = require('./imgs/avatar.png')
-var avatar2 = require('./imgs/download.png')
+var avatar = require('../imgs/avatar.png')
+var avatar2 = require('../imgs/download.png')
 
 function createAvatar() {
     var dom = document.getElementById('main')

@@ -1,5 +1,10 @@
 {
   "name": "webpack-lesson",
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "@babel/polyfill"
+  ],
   "version": "1.0.0",
   "description": "",
   "private": "true",
@@ -8,7 +13,9 @@
     "bundle": "webpack",
     "watch": "webpack --watch",
     "start": "webpack-dev-server",
-    "server": "node server.js"
+    "server": "node server.js",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "Ryann",
   "license": "ISC",
@@ -41,7 +48,8 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",

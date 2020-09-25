@@ -9,6 +9,13 @@ import Content from './content'
 import createAvatar from './createAvatar'
 import counter from './counter'
 import number from './number'
+import {
+  // 这里虽然只引入了 add 方法，但是 webpack 自动地把 math.js 里全部导出函数都引入了，这样没有必要
+  // 要想解决这个问题，webpack 2.0+ 版本就提供了个 Tree Shaking 配置，作用是把一个模块里没用的部分（如我们不想用到的导出的函数）给“摇晃掉”
+  // 注意：Tree Shaking 只支持 ES 模块的引入（只支持 import）
+  add,
+  // minus
+} from './math'
 
 //import '../css/index.css'
 import '../css/style.scss'
@@ -53,6 +60,11 @@ if (module.hot) {
     number()
   })
 }
+
+
+// Tree Shaking
+add(1, 9)
+// minus(3, 1)
 
 new Header()
 new Sidebar()

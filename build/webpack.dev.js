@@ -28,11 +28,7 @@ const devConfig = {
     // 添加这样一个插件配合上 webpack-dev-server 参数配置就能实现 HMR 功能了，很简单的
     // 嗯，开启完记得重启一下 webpack-dev-server，不然会按照之前的配置傻傻的刷新
     new webpack.HotModuleReplacementPlugin()
-  ],
-  optimization: {
-    // 在 development 环境下配置着一个参数加在 package.json 里配置上 sideEffects 就能开启 Tree Shaking 了
-    usedExports: true
-  }
+  ]
 }
 
 // 利用 merge 就能很简单和把 common 和 其它配置文件做结合

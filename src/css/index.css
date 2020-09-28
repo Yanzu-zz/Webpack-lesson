@@ -1,1 +1,4 @@
-@import './avatar.css'
+@import './avatar.css';
+body {
+    background: #FFF;
+}

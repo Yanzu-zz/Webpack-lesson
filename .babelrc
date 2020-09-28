@@ -1,36 +1,38 @@
 {
-    "presets": [
-        [
-            "@babel/preset-env",
-            {
-                "targets": {
-                    "edge": "17",
-                    "firefox": "60",
-                    "chrome": "67",
-                    "safari": "11.1"
-                },
-                // 配置了这个按需引入参数，使用 es/module/* 功能的时候很有可能会报错找不到 module/xxx，去除掉这个参数即可，但是这样打包出来的文件会很臃肿
-                "useBuiltIns": "usage",
-                "corejs": "3"
-            }
-        ],
-        // 一个 preset 一个数组
-        [
-            "@babel/preset-react"
-        ]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1"
+        },
+        // 配置了这个按需引入参数，使用 es/module/* 功能的时候很有可能会报错找不到 module/xxx，去除掉这个参数即可，但是这样打包出来的文件会很臃肿
+        "useBuiltIns": "usage",
+        "corejs": "3"
+      }
     ],
-    "plugins": ["@babel/plugin-syntax-dynamic-import"]
-    // "plugins": [
-    //     [
-    //         "@babel/plugin-transform-runtime",
-    //         {
-    //             "absoluteRuntime": false,
-    //             "corejs": 3,
-    //             "helpers": true,
-    //             "regenerator": true,
-    //             "useESModules": false,
-    //             "version": "7.0.0-beta.0"
-    //         }
-    //     ]
-    // ]
+    // 一个 preset 一个数组
+    [
+      "@babel/preset-react"
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+  // "plugins": [
+  //     [
+  //         "@babel/plugin-transform-runtime",
+  //         {
+  //             "absoluteRuntime": false,
+  //             "corejs": 3,
+  //             "helpers": true,
+  //             "regenerator": true,
+  //             "useESModules": false,
+  //             "version": "7.0.0-beta.0"
+  //         }
+  //     ]
+  // ]
 }

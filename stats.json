@@ -1,0 +1,1190 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.2",
+  "hash": "6876d8e947ef4b006601",
+  "time": 1391,
+  "builtAt": 1601280380060,
+  "publicPath": "",
+  "outputPath": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\dist",
+  "assetsByChunkName": {
+    "cssExtract": [
+      "cssExtract.css",
+      "cssExtract.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "cssExtract.css",
+      "size": 81,
+      "chunks": [
+        "cssExtract"
+      ],
+      "chunkNames": [
+        "cssExtract"
+      ],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "cssExtract.js",
+      "size": 33502,
+      "chunks": [
+        "cssExtract"
+      ],
+      "chunkNames": [
+        "cssExtract"
+      ],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "index.html",
+      "size": 326,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "cssExtract": {
+      "chunks": [
+        "cssExtract"
+      ],
+      "assets": [
+        "cssExtract.css",
+        "cssExtract.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "cssExtract": {
+      "chunks": [
+        "cssExtract"
+      ],
+      "assets": [
+        "cssExtract.css",
+        "cssExtract.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": "cssExtract",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 200,
+      "names": [
+        "cssExtract"
+      ],
+      "files": [
+        "cssExtract.css",
+        "cssExtract.js"
+      ],
+      "hash": "a5c90f35d31690b6204c",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": "./src/css/index.css",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "name": "./src/css/index.css",
+          "index": 1,
+          "index2": 2,
+          "size": 39,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "cssExtract"
+          ],
+          "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+          "issuerId": "./src/js/MiniCssExtract.js",
+          "issuerName": "./src/js/MiniCssExtract.js",
+          "issuerPath": [
+            {
+              "id": "./src/js/MiniCssExtract.js",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+              "name": "./src/js/MiniCssExtract.js",
+              "profile": {
+                "factory": 69,
+                "building": 900
+              }
+            }
+          ],
+          "profile": {
+            "factory": 5,
+            "building": 385
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/js/MiniCssExtract.js",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+              "module": "./src/js/MiniCssExtract.js",
+              "moduleName": "./src/js/MiniCssExtract.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../css/index.css",
+              "loc": "2:0-26"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "// extracted by mini-css-extract-plugin"
+        },
+        {
+          "id": "./src/js/MiniCssExtract.js",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+          "name": "./src/js/MiniCssExtract.js",
+          "index": 0,
+          "index2": 3,
+          "size": 82,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "cssExtract"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 69,
+            "building": 900
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./src/js/MiniCssExtract.js",
+              "loc": "cssExtract"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "// 分割 css 插件（太狠了，连 CSS 都能分割\nimport '../css/index.css';"
+        },
+        {
+          "id": "?125e",
+          "identifier": "css C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\avatar.css 0",
+          "name": "css ./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+          "index": 2,
+          "index2": 0,
+          "size": 47,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "cssExtract"
+          ],
+          "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "issuerId": "./src/css/index.css",
+          "issuerName": "./src/css/index.css",
+          "issuerPath": [
+            {
+              "id": "./src/js/MiniCssExtract.js",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+              "name": "./src/js/MiniCssExtract.js",
+              "profile": {
+                "factory": 69,
+                "building": 900
+              }
+            },
+            {
+              "id": "./src/css/index.css",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "name": "./src/css/index.css",
+              "profile": {
+                "factory": 5,
+                "building": 385
+              }
+            }
+          ],
+          "profile": {
+            "factory": 0,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/css/index.css",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "module": "./src/css/index.css",
+              "moduleName": "./src/css/index.css"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2
+        },
+        {
+          "id": "?baf7",
+          "identifier": "css C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css 0",
+          "name": "css ./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+          "index": 3,
+          "index2": 1,
+          "size": 32,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "cssExtract"
+          ],
+          "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "issuerId": "./src/css/index.css",
+          "issuerName": "./src/css/index.css",
+          "issuerPath": [
+            {
+              "id": "./src/js/MiniCssExtract.js",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+              "name": "./src/js/MiniCssExtract.js",
+              "profile": {
+                "factory": 69,
+                "building": 900
+              }
+            },
+            {
+              "id": "./src/css/index.css",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "name": "./src/css/index.css",
+              "profile": {
+                "factory": 5,
+                "building": 385
+              }
+            }
+          ],
+          "profile": {
+            "factory": 0,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/css/index.css",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "module": "./src/css/index.css",
+              "moduleName": "./src/css/index.css"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 2
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "cssExtract",
+          "request": "./src/js/MiniCssExtract.js",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "./src/css/index.css",
+      "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+      "name": "./src/css/index.css",
+      "index": 1,
+      "index2": 2,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "cssExtract"
+      ],
+      "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+      "issuerId": "./src/js/MiniCssExtract.js",
+      "issuerName": "./src/js/MiniCssExtract.js",
+      "issuerPath": [
+        {
+          "id": "./src/js/MiniCssExtract.js",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+          "name": "./src/js/MiniCssExtract.js",
+          "profile": {
+            "factory": 69,
+            "building": 900
+          }
+        }
+      ],
+      "profile": {
+        "factory": 5,
+        "building": 385
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/js/MiniCssExtract.js",
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+          "module": "./src/js/MiniCssExtract.js",
+          "moduleName": "./src/js/MiniCssExtract.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "../css/index.css",
+          "loc": "2:0-26"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "// extracted by mini-css-extract-plugin"
+    },
+    {
+      "id": "./src/js/MiniCssExtract.js",
+      "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+      "name": "./src/js/MiniCssExtract.js",
+      "index": 0,
+      "index2": 3,
+      "size": 82,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "cssExtract"
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "profile": {
+        "factory": 69,
+        "building": 900
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "./src/js/MiniCssExtract.js",
+          "loc": "cssExtract"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "// 分割 css 插件（太狠了，连 CSS 都能分割\nimport '../css/index.css';"
+    },
+    {
+      "id": "?125e",
+      "identifier": "css C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\avatar.css 0",
+      "name": "css ./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+      "index": 2,
+      "index2": 0,
+      "size": 47,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "cssExtract"
+      ],
+      "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+      "issuerId": "./src/css/index.css",
+      "issuerName": "./src/css/index.css",
+      "issuerPath": [
+        {
+          "id": "./src/js/MiniCssExtract.js",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+          "name": "./src/js/MiniCssExtract.js",
+          "profile": {
+            "factory": 69,
+            "building": 900
+          }
+        },
+        {
+          "id": "./src/css/index.css",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "name": "./src/css/index.css",
+          "profile": {
+            "factory": 5,
+            "building": 385
+          }
+        }
+      ],
+      "profile": {
+        "factory": 0,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/css/index.css",
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "module": "./src/css/index.css",
+          "moduleName": "./src/css/index.css"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 2
+    },
+    {
+      "id": "?baf7",
+      "identifier": "css C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css 0",
+      "name": "css ./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+      "index": 3,
+      "index2": 1,
+      "size": 32,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "cssExtract"
+      ],
+      "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+      "issuerId": "./src/css/index.css",
+      "issuerName": "./src/css/index.css",
+      "issuerPath": [
+        {
+          "id": "./src/js/MiniCssExtract.js",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\js\\MiniCssExtract.js",
+          "name": "./src/js/MiniCssExtract.js",
+          "profile": {
+            "factory": 69,
+            "building": 900
+          }
+        },
+        {
+          "id": "./src/css/index.css",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "name": "./src/css/index.css",
+          "profile": {
+            "factory": 5,
+            "building": 385
+          }
+        }
+      ],
+      "profile": {
+        "factory": 0,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/css/index.css",
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\mini-css-extract-plugin\\dist\\loader.js??ref--5-0!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "module": "./src/css/index.css",
+          "moduleName": "./src/css/index.css"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 2
+    }
+  ],
+  "filteredModules": 0,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\dist",
+      "assetsByChunkName": {
+        "HtmlWebpackPlugin_0": "__child-HtmlWebpackPlugin_0"
+      },
+      "assets": [
+        {
+          "name": "__child-HtmlWebpackPlugin_0",
+          "size": 5951,
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "chunkNames": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "info": {},
+          "emitted": false
+        }
+      ],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "HtmlWebpackPlugin_0": {
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "assets": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "HtmlWebpackPlugin_0": {
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "assets": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": "HtmlWebpackPlugin_0",
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 528,
+          "names": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "files": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "hash": "51086490551d673e03ff",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\index.html",
+              "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
+              "index": 0,
+              "index2": 0,
+              "size": 528,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "HtmlWebpackPlugin_0"
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "profile": {
+                "factory": 26,
+                "building": 14
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\index.html",
+                  "loc": "HtmlWebpackPlugin_0"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [],
+              "depth": 0,
+              "source": "var _ = __non_webpack_require__(\"C:\\\\Users\\\\Administrator\\\\Desktop\\\\Webpack-lesson\\\\node_modules\\\\lodash\\\\lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\r\\n<html lang=\"en\">\\r\\n\\r\\n<head>\\r\\n  <meta charset=\"UTF-8\">\\r\\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\r\\n  <title>Webpack Management</title>\\r\\n</head>\\r\\n\\r\\n<body>\\r\\n  <div id=\"main\"></div>\\r\\n</body>\\r\\n\\r\\n</html>';\nreturn __p\n})();}}"
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "HtmlWebpackPlugin_0",
+              "request": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\index.html",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\index.html",
+          "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
+          "index": 0,
+          "index2": 0,
+          "size": 528,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 26,
+            "building": 14
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\index.html",
+              "loc": "HtmlWebpackPlugin_0"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "var _ = __non_webpack_require__(\"C:\\\\Users\\\\Administrator\\\\Desktop\\\\Webpack-lesson\\\\node_modules\\\\lodash\\\\lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\r\\n<html lang=\"en\">\\r\\n\\r\\n<head>\\r\\n  <meta charset=\"UTF-8\">\\r\\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\r\\n  <title>Webpack Management</title>\\r\\n</head>\\r\\n\\r\\n<body>\\r\\n  <div id=\"main\"></div>\\r\\n</body>\\r\\n\\r\\n</html>';\nreturn __p\n})();}}"
+        }
+      ],
+      "filteredModules": 0,
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "HtmlWebpackCompiler"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/dist/css/",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": "mini-css-extract-plugin",
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 3742,
+          "names": [
+            "mini-css-extract-plugin"
+          ],
+          "files": [
+            "*"
+          ],
+          "hash": "e920b7de215b9b41d11b",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\avatar.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+              "index": 2,
+              "index2": 1,
+              "size": 536,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "mini-css-extract-plugin"
+              ],
+              "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "issuerId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "issuerPath": [
+                {
+                  "id": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+                  "name": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "profile": {
+                    "factory": 1,
+                    "building": 355
+                  }
+                }
+              ],
+              "profile": {
+                "factory": 4,
+                "building": 5,
+                "dependencies": 1
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+                  "module": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "-!../../node_modules/css-loader/dist/cjs.js!./avatar.css",
+                  "loc": "3:0-105"
+                },
+                {
+                  "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+                  "module": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "type": "harmony import specifier",
+                  "userRequest": "-!../../node_modules/css-loader/dist/cjs.js!./avatar.css",
+                  "loc": "5:26-59"
+                }
+              ],
+              "usedExports": [
+                "default"
+              ],
+              "providedExports": [
+                "default"
+              ],
+              "optimizationBailout": [],
+              "depth": 1,
+              "source": "// Imports\nimport ___CSS_LOADER_API_IMPORT___ from \"../../node_modules/css-loader/dist/runtime/api.js\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(true);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".avatar {\\r\\n  width: 150px;\\r\\n  height: 150px;\\r\\n}\", \"\",{\"version\":3,\"sources\":[\"webpack://src/css/avatar.css\"],\"names\":[],\"mappings\":\"AAAA;EACE,YAAY;EACZ,aAAa;AACf\",\"sourcesContent\":[\".avatar {\\r\\n  width: 150px;\\r\\n  height: 150px;\\r\\n}\"],\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
+            },
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "index": 0,
+              "index2": 2,
+              "size": 689,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "mini-css-extract-plugin"
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "profile": {
+                "factory": 1,
+                "building": 355
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "!!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+                  "loc": "mini-css-extract-plugin"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": [
+                "default"
+              ],
+              "optimizationBailout": [],
+              "depth": 0,
+              "source": "// Imports\nimport ___CSS_LOADER_API_IMPORT___ from \"../../node_modules/css-loader/dist/runtime/api.js\";\nimport ___CSS_LOADER_AT_RULE_IMPORT_0___ from \"-!../../node_modules/css-loader/dist/cjs.js!./avatar.css\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(true);\n___CSS_LOADER_EXPORT___.i(___CSS_LOADER_AT_RULE_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\r\\n    background: #FFF;\\r\\n}\", \"\",{\"version\":3,\"sources\":[\"webpack://src/css/index.css\"],\"names\":[],\"mappings\":\"AACA;IACI,gBAAgB;AACpB\",\"sourcesContent\":[\"@import './avatar.css';\\r\\nbody {\\r\\n    background: #FFF;\\r\\n}\"],\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
+            },
+            {
+              "id": "./node_modules/css-loader/dist/runtime/api.js",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\runtime\\api.js",
+              "name": "./node_modules/css-loader/dist/runtime/api.js",
+              "index": 1,
+              "index2": 0,
+              "size": 2517,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "mini-css-extract-plugin"
+              ],
+              "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "issuerId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "issuerPath": [
+                {
+                  "id": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+                  "name": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "profile": {
+                    "factory": 1,
+                    "building": 355
+                  }
+                }
+              ],
+              "profile": {
+                "factory": 4,
+                "building": 5,
+                "dependencies": 1
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+                  "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\avatar.css",
+                  "module": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+                  "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "../../node_modules/css-loader/dist/runtime/api.js",
+                  "loc": "2:0-92"
+                },
+                {
+                  "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+                  "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\avatar.css",
+                  "module": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+                  "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+                  "type": "harmony import specifier",
+                  "userRequest": "../../node_modules/css-loader/dist/runtime/api.js",
+                  "loc": "3:30-57"
+                },
+                {
+                  "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+                  "module": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "../../node_modules/css-loader/dist/runtime/api.js",
+                  "loc": "2:0-92"
+                },
+                {
+                  "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+                  "module": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+                  "type": "harmony import specifier",
+                  "userRequest": "../../node_modules/css-loader/dist/runtime/api.js",
+                  "loc": "4:30-57"
+                }
+              ],
+              "usedExports": [
+                "default"
+              ],
+              "providedExports": null,
+              "optimizationBailout": [],
+              "depth": 1,
+              "source": "\"use strict\";\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot || '').concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}"
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "mini-css-extract-plugin",
+              "request": "!!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\avatar.css",
+          "name": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+          "index": 2,
+          "index2": 1,
+          "size": 536,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "issuerId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+          "issuerPath": [
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "profile": {
+                "factory": 1,
+                "building": 355
+              }
+            }
+          ],
+          "profile": {
+            "factory": 4,
+            "building": 5,
+            "dependencies": 1
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "type": "harmony side effect evaluation",
+              "userRequest": "-!../../node_modules/css-loader/dist/cjs.js!./avatar.css",
+              "loc": "3:0-105"
+            },
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "type": "harmony import specifier",
+              "userRequest": "-!../../node_modules/css-loader/dist/cjs.js!./avatar.css",
+              "loc": "5:26-59"
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "// Imports\nimport ___CSS_LOADER_API_IMPORT___ from \"../../node_modules/css-loader/dist/runtime/api.js\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(true);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \".avatar {\\r\\n  width: 150px;\\r\\n  height: 150px;\\r\\n}\", \"\",{\"version\":3,\"sources\":[\"webpack://src/css/avatar.css\"],\"names\":[],\"mappings\":\"AAAA;EACE,YAAY;EACZ,aAAa;AACf\",\"sourcesContent\":[\".avatar {\\r\\n  width: 150px;\\r\\n  height: 150px;\\r\\n}\"],\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
+        },
+        {
+          "id": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "name": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+          "index": 0,
+          "index2": 2,
+          "size": 689,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 1,
+            "building": 355
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "!!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "loc": "mini-css-extract-plugin"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "// Imports\nimport ___CSS_LOADER_API_IMPORT___ from \"../../node_modules/css-loader/dist/runtime/api.js\";\nimport ___CSS_LOADER_AT_RULE_IMPORT_0___ from \"-!../../node_modules/css-loader/dist/cjs.js!./avatar.css\";\nvar ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(true);\n___CSS_LOADER_EXPORT___.i(___CSS_LOADER_AT_RULE_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\r\\n    background: #FFF;\\r\\n}\", \"\",{\"version\":3,\"sources\":[\"webpack://src/css/index.css\"],\"names\":[],\"mappings\":\"AACA;IACI,gBAAgB;AACpB\",\"sourcesContent\":[\"@import './avatar.css';\\r\\nbody {\\r\\n    background: #FFF;\\r\\n}\"],\"sourceRoot\":\"\"}]);\n// Exports\nexport default ___CSS_LOADER_EXPORT___;\n"
+        },
+        {
+          "id": "./node_modules/css-loader/dist/runtime/api.js",
+          "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "name": "./node_modules/css-loader/dist/runtime/api.js",
+          "index": 1,
+          "index2": 0,
+          "size": 2517,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "issuer": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+          "issuerId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+          "issuerPath": [
+            {
+              "id": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "identifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "profile": {
+                "factory": 1,
+                "building": 355
+              }
+            }
+          ],
+          "profile": {
+            "factory": 4,
+            "building": 5,
+            "dependencies": 1
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\avatar.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "2:0-92"
+            },
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\avatar.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/avatar.css",
+              "type": "harmony import specifier",
+              "userRequest": "../../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "3:30-57"
+            },
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "type": "harmony side effect evaluation",
+              "userRequest": "../../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "2:0-92"
+            },
+            {
+              "moduleId": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\node_modules\\css-loader\\dist\\cjs.js!C:\\Users\\Administrator\\Desktop\\Webpack-lesson\\src\\css\\index.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/css/index.css",
+              "type": "harmony import specifier",
+              "userRequest": "../../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "4:30-57"
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\"use strict\";\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot || '').concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}"
+        }
+      ],
+      "filteredModules": 0,
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!src/css/index.css"
+    }
+  ]
+}

@@ -2,8 +2,7 @@
   "name": "webpack-lesson",
   "sideEffects": [
     "*.css",
-    "*.scss",
-    "@babel/polyfill"
+    "*.scss"
   ],
   "version": "1.0.0",
   "description": "",
@@ -14,7 +13,7 @@
     "start": "webpack-dev-server",
     "server": "node server.js",
     "dev": "webpack-dev-server --config ./build/webpack.dev.js",
-    "dev-build": "webpack --config ./build/webpack.dev.js",
+    "dev-build": "webpack --profile --json > stats.json --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js"
   },
   "author": "Ryann",
@@ -36,6 +35,7 @@
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
     "install": "^0.13.0",
+    "mini-css-extract-plugin": "^0.11.2",
     "node-sass": "^4.14.1",
     "npm": "^6.14.8",
     "postcss": "^8.0.5",

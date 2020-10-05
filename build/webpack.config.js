@@ -143,6 +143,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   optimization: {
+    // usedExports: 开启 Tree Shaking 功能
     // 在 development 环境下配置着一个参数加在 package.json 里配置上 sideEffects 就能开启 Tree Shaking 了
     usedExports: true
   }

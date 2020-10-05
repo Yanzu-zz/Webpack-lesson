@@ -10,6 +10,10 @@ const devConfig = {
   // 在日常业务开发过程中（开发环境 development），推荐使用 cheap-module-eval-source-map 这个配置参数
   // 生产环境（production）中，推荐使用 cheap-module-source-map，这个提示效果会更好一些
   devtool: 'cheap-module-eval-source-map',
+  output:{
+    filename: '[name].js',
+    chunkFilename: '[name].chunk.js',
+  },
   // 使用 devServer 开发能大大的提升效率
   // 开启一个 web 服务器能使用 ajax 请求并很大程度上模拟线上环境
   // 早期的 devServer 不太成熟，容易出错，所以很多程序员都会自己写一个类似它的中间件来监听代码改动，我们这里就学一学，详见 server.js

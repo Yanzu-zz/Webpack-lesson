@@ -6,6 +6,7 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const commonConfig = {
     // entry: './src/index.js', // 入口文件，这样写是下面的简写
@@ -16,16 +17,16 @@ const commonConfig = {
         // PP: './src/js/Prefetching_Preloading.js'
         cssExtract: './src/js/MiniCssExtract.js'
     },
-    output: { // 输出配置
-        // 如果打包后的文件是要上传到服务器的，那就可以修改这个参数来让引入文件时自动帮你加上cdn前缀
-        //publicPath: 'http://www.yourServerUrl.com.cn',
+    // output: { // 输出配置
+    //     // 如果打包后的文件是要上传到服务器的，那就可以修改这个参数来让引入文件时自动帮你加上cdn前缀
+    //     //publicPath: 'http://www.yourServerUrl.com.cn',
 
-        //filename: 'bundle.js', // 打包后的文件名，但如果名字写死了，打包多个文件时就会报错，因为会覆盖掉先打包的文件
-        // 我们配置了 HtmlWebpackPlugin 后，打包再多的 js 文件都能自动引入
-        filename: '[name].js', // 这种动态打包文件（名）的方式就很推荐
-        chunkFilename: '[name].chunk.js', // 源代码依赖引入的包的输出名字就是这个
-        path: path.resolve(__dirname, '../dist') // 打包输出文件位置
-    },
+    //     // filename: 'bundle.js', // 打包后的文件名，但如果名字写死了，打包多个文件时就会报错，因为会覆盖掉先打包的文件
+    //     // 我们配置了 HtmlWebpackPlugin 后，打包再多的 js 文件都能自动引入
+    //     filename: '[name].js', // 这种动态打包文件（名）的方式就很推荐
+    //     chunkFilename: '[name].chunk.js', // 源代码依赖引入的包的输出名字就是这个
+    //     path: path.resolve(__dirname, '../dist') // 打包输出文件位置
+    // },
     // 引入解析其它文件的配置属性（输入输出位置/名字等）
     module: {
         rules: [{
@@ -44,11 +45,14 @@ const commonConfig = {
             {
                 test: /\.css$/i,
                 use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        // publicPath: '/dist/css/'
-                    }
-                }, 'css-loader']
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            // publicPath: '/dist/css/'
+                        }
+                    },
+                    'css-loader',
+                    'postcss-loader'
+                ]
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -126,9 +130,18 @@ const commonConfig = {
             template: 'src/index.html'
         }),
         new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            // 如果页面直接引入某个css文件，那么就会走 filename 配置，否则按 chunkFilename 配置来
+            filename: '[name].css',
+            // chunkFilename: '[name].chunk.css'
+        })
     ],
     optimization: {
+        // 配置了这个参数会把 manifest 逻辑代码单独抽出来 runtime.[hash].js
+        // 这样你不改变自己的业务逻辑代码它的 contenthash 就永远不会变
+        runtimeChunk:{
+            name: 'runtime'
+        },
         // 在 development 环境下配置着一个参数加在 package.json 里配置上 sideEffects 就能开启 Tree Shaking 了
         usedExports: true,
         // 加这样一个配置参数，就能轻松地实现 Code Spliting 功能
@@ -154,6 +167,13 @@ const commonConfig = {
                     priority: -20,
                     reuseExistingChunk: true, // 如果一个模块已经打包过了，那么后面遇到引入打包过的模块就不再二次打包
                     filename: '[name].common.js'
+                },
+                // CSS 文件的 Code Spliting 风格
+                styles: { // 这里的配置风格是全部引入的css文件都打包到一个文件去
+                    name: 'styles',
+                    test: /\.css$/,
+                    chunks: 'all',
+                    enforce: true,
                 }
             }
         }

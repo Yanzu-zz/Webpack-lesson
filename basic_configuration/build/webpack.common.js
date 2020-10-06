@@ -7,6 +7,12 @@ const {
 } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const webpack = require('webpack')
+const {
+    merge
+} = require('webpack-merge')
+const devConfig = require('./webpack.dev.js')
+const prodConfig = require('./webpack.prod.js')
 
 const commonConfig = {
     // entry: './src/index.js', // 入口文件，这样写是下面的简写
@@ -15,7 +21,8 @@ const commonConfig = {
         // codeSpliting: './src/js/codeSpliting.js',
         // lazyLoad: './src/js/lazyLoad.js'
         // PP: './src/js/Prefetching_Preloading.js'
-        cssExtract: './src/js/MiniCssExtract.js'
+        // cssExtract: './src/js/MiniCssExtract.js'
+        shimming: './src/js/shimming.js'
     },
     // output: { // 输出配置
     //     // 如果打包后的文件是要上传到服务器的，那就可以修改这个参数来让引入文件时自动帮你加上cdn前缀
@@ -88,7 +95,7 @@ const commonConfig = {
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
-                use: {
+                use: [{
                     // babel-loader 可以将 ES6+ 代码转化为一颗 抽象语法树
                     loader: "babel-loader",
                     // babel 有太多的配置项了，如果在这里写很多的话，会显得很臃肿，所以可以去根目录下新建一个个 .babelrc 文件来写配置
@@ -119,7 +126,13 @@ const commonConfig = {
                     //   //   }
                     //   // ]]
                     // }
-                }
+                }, {
+                    loader: 'imports-loader',
+                    options: {
+                        imports: 'default jquery $',
+                        type: 'module',
+                    }
+                }]
             }
         ]
     },
@@ -134,12 +147,16 @@ const commonConfig = {
             // 如果页面直接引入某个css文件，那么就会走 filename 配置，否则按 chunkFilename 配置来
             filename: '[name].css',
             // chunkFilename: '[name].chunk.css'
+        }),
+        new webpack.ProvidePlugin({
+            // 如果一个模块中使用了 $ 这个字符串，那就会在该模块下自动帮你引入 jquery，引入名为 $
+            $: 'jquery'
         })
     ],
     optimization: {
         // 配置了这个参数会把 manifest 逻辑代码单独抽出来 runtime.[hash].js
         // 这样你不改变自己的业务逻辑代码它的 contenthash 就永远不会变
-        runtimeChunk:{
+        runtimeChunk: {
             name: 'runtime'
         },
         // 在 development 环境下配置着一个参数加在 package.json 里配置上 sideEffects 就能开启 Tree Shaking 了
@@ -180,4 +197,11 @@ const commonConfig = {
     }
 }
 
-module.exports = commonConfig
+module.exports = (env) => {
+    if (env && env.production) { // 线上环境打包
+        return merge(commonConfig, prodConfig)
+    } else { // 开发环境
+        // 如果不传环境变量，那么默认就是开发环境
+        return merge(commonConfig, devConfig)
+    }
+}

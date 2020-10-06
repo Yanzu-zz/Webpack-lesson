@@ -12,9 +12,9 @@
     "watch": "webpack --watch",
     "start": "webpack-dev-server",
     "server": "node server.js",
-    "dev": "webpack-dev-server --config ./build/webpack.dev.js",
-    "dev-build": "webpack --profile --json > stats.json --config ./build/webpack.dev.js",
-    "build": "webpack --config ./build/webpack.prod.js"
+    "dev": "webpack-dev-server --config ./build/webpack.common.js",
+    "dev-build": "webpack --profile --json > stats.json --config ./build/webpack.common.js",
+    "build": "webpack --env.production --progress --config ./build/webpack.common.js"
   },
   "author": "Ryann",
   "license": "ISC",
@@ -34,7 +34,9 @@
     "express": "^4.17.1",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
+    "imports-loader": "^1.1.0",
     "install": "^0.13.0",
+    "jquery": "^3.5.1",
     "mini-css-extract-plugin": "^0.11.2",
     "node-sass": "^4.14.1",
     "npm": "^6.14.8",

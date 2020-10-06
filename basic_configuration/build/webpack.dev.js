@@ -1,8 +1,4 @@
 const webpack = require('webpack')
-const {
-  merge
-} = require('webpack-merge')
-const commonConfig = require('./webpack.common')
 
 const devConfig = {
   mode: 'development',
@@ -36,4 +32,4 @@ const devConfig = {
 }
 
 // 利用 merge 就能很简单和把 common 和 其它配置文件做结合
-module.exports = merge(commonConfig, devConfig)
+module.exports = devConfig

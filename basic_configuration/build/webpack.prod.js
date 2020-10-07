@@ -1,6 +1,7 @@
 const TerserJSPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 
 // 我们可以发现，prod 和 dev 配置文件中，有大量相同的重复代码出现，这里我们可以创建一个 webpack.common.js 来解决复用问题
 const prodConfig = {
@@ -14,7 +15,13 @@ const prodConfig = {
   },
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})]
-  }
+  },
+  plugins: [
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
+    })
+  ]
 }
 
 module.exports = prodConfig

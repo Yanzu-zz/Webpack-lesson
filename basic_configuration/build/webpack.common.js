@@ -23,7 +23,8 @@ const commonConfig = {
     // PP: './src/js/Prefetching_Preloading.js'
     // cssExtract: './src/js/MiniCssExtract.js'
     // shimming: './src/js/shimming.js',
-    PWA: './src/js/PWA.js'
+    // PWA: './src/js/PWA.js',
+    react: './src/js/react.js'
   },
   // output: { // 输出配置
   //     // 如果打包后的文件是要上传到服务器的，那就可以修改这个参数来让引入文件时自动帮你加上cdn前缀

@@ -16,6 +16,7 @@
     ],
     // 一个 preset 一个数组
     [
+      // 这里就用 babel 来处理 react了
       "@babel/preset-react"
     ]
   ],

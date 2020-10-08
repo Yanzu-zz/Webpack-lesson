@@ -6,7 +6,7 @@ const devConfig = {
   // 在日常业务开发过程中（开发环境 development），推荐使用 cheap-module-eval-source-map 这个配置参数
   // 生产环境（production）中，推荐使用 cheap-module-source-map，这个提示效果会更好一些
   devtool: 'cheap-module-eval-source-map',
-  output:{
+  output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
   },
@@ -20,8 +20,26 @@ const devConfig = {
     open: true, // 启动时自动使用浏览器打开页面
     hot: true, // 开启 Hot Module Replacement 这个功能
     hotOnly: true, // 这个配置参数的意义是：即使 HMR 功能没有生效，我们也不要让浏览器自动刷新
+    historyApiFallback: true,
     proxy: {
-      '/direct': 'http://localhost:3000' // 能自动转发指定的请求网址到别的域名或端口
+      '/direct22': 'http://localhost:3001', // 能自动转发指定的请求网址到别的域名或端口
+      // '/react/api': 'http://www.dell-lee.com',
+      '/react/api': {
+        target: 'http://www.dell-lee.com',
+        secure: false, // 设置成 false 才能对 https 网址的转发
+        bypass: function (req, res, proxyOptions) {
+          // 只要请求的是 html 类型的地址，一律返回 /index.html
+          if (req.headers.accept.indexOf('html') !== -1) {
+            console.log('Skipping proxy for browser request.');
+            return '/index.html';
+          }
+        },
+        pathRewrite: {
+          // 不仅可以接口转发，还可以接口下面的资源转发
+          'header.json': 'demo.json'
+        },
+        changeOrigin: true
+      }
     }
   },
   plugins: [

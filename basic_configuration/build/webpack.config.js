@@ -13,12 +13,12 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   // entry: './src/index.js', // 入口文件，这样写是下面的简写
   entry: {
-    main: './src/js/index.js',
+    // main: './src/js/index.js',
     // sub: './src/js/index.js', // 打包生成两个文件
     // second: './src/js/second.js',
     // HMR: './src/js/HMR.js',
     // babel: './src/js/babel.js',
-    // react: './src/js/react.js'
+    react: './src/js/react.js'
   },
   output: { // 输出配置
     // 如果打包后的文件是要上传到服务器的，那就可以修改这个参数来让引入文件时自动帮你加上cdn前缀

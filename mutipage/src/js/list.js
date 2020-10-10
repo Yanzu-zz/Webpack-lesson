@@ -8,4 +8,6 @@ class List extends Component {
   }
 }
 
+console.log('list page')
+
 export default List

@@ -14,34 +14,48 @@ const {
 } = require('webpack-merge')
 const devConfig = require('./webpack.dev.js')
 const prodConfig = require('./webpack.prod.js')
+const {
+  config
+} = require('process')
 
-// 智能化引入 plugins
-const plugins = [
-  // HtmlWebpackPlugin 会在打包结束后，自动生成一个html5文件并帮你引入打包好的 js 文件
-  new HtmlWebpackPlugin({
-    template: 'src/index.html'
-  }),
-  new CleanWebpackPlugin(),
-  new webpack.ProvidePlugin({
-    // 如果一个模块中使用了 $ 这个字符串，那就会在该模块下自动帮你引入 jquery，引入名为 $
-    $: 'jquery'
-  }),
-]
+// 这个函数就是可以自动的分析我们需要打包，打包后需要引入的 chunk 文件的函数，大大地提升了智能化
+const makePlugins = (configs) => {
+  const plugins = [
+    new CleanWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      // 如果一个模块中使用了 $ 这个字符串，那就会在该模块下自动帮你引入 jquery，引入名为 $
+      $: 'jquery'
+    })
+  ]
 
-const manifestFiles = fs.readdirSync(path.resolve(__dirname, '../dll'))
-manifestFiles.forEach(file => {
-  if (/.*\.dll.js/.test(file)) {
-    plugins.push(new AddAssetHtmlWebpackPlugin({
-      filepath: path.resolve(__dirname, '../dll', file)
-    }))
-  }
+  // 对应页面分别生成和引入js文件
+  Object.keys(configs.entry).forEach(item => {
+    plugins.push(
+      new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        filename: `${item}.html`,
+        chunks: ['runtime', 'vendors', item]
+      })
+    )
+  })
 
-  if (/.*\.manifest.json/.test(file)) {
-    plugins.push(new webpack.DllReferencePlugin({
-      manifest: path.resolve(__dirname, '../dll', file)
-    }))
-  }
-})
+  const manifestFiles = fs.readdirSync(path.resolve(__dirname, '../dll'))
+  manifestFiles.forEach(file => {
+    if (/.*\.dll.js/.test(file)) {
+      plugins.push(new AddAssetHtmlWebpackPlugin({
+        filepath: path.resolve(__dirname, '../dll', file)
+      }))
+    }
+
+    if (/.*\.manifest.json/.test(file)) {
+      plugins.push(new webpack.DllReferencePlugin({
+        manifest: path.resolve(__dirname, '../dll', file)
+      }))
+    }
+  })
+
+  return plugins
+}
 
 const commonConfig = {
   // entry: './src/index.js', // 入口文件，这样写是下面的简写
@@ -54,7 +68,8 @@ const commonConfig = {
     // shimming: './src/js/shimming.js',
     // PWA: './src/js/PWA.js',
     react: './src/js/react.js',
-    list:'./src/js/list.js'
+    list: './src/js/list.js',
+    home: './src/js/home.js'
   },
   // output: { // 输出配置
   //     // 如果打包后的文件是要上传到服务器的，那就可以修改这个参数来让引入文件时自动帮你加上cdn前缀
@@ -156,7 +171,6 @@ const commonConfig = {
       }
     ]
   },
-  plugins: plugins,
   // plugin 可以在 webpack 运行到某个时刻的时候，帮你做一些事情（类似中间件）
   optimization: {
     // 配置了这个参数会把 manifest 逻辑代码单独抽出来 runtime.[hash].js
@@ -201,6 +215,8 @@ const commonConfig = {
     }
   }
 }
+
+commonConfig.plugins = makePlugins(commonConfig)
 
 module.exports = (env) => {
   if (env && env.production) { // 线上环境打包

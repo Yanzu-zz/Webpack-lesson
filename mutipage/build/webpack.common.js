@@ -39,6 +39,7 @@ const makePlugins = (configs) => {
     )
   })
 
+  // 导入提前 build:dll 生成的文件，加速编译打包
   const manifestFiles = fs.readdirSync(path.resolve(__dirname, '../dll'))
   manifestFiles.forEach(file => {
     if (/.*\.dll.js/.test(file)) {
